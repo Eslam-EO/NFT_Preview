@@ -1,0 +1,177 @@
+/* Start Global Values */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d1a2dff;
+}
+/** Small **/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/** Medium **/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/** Large **/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Values */
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c192cff;
+  width: 405px;
+  height: 550px;
+  padding: 30px;
+  border-radius: 3%;
+  z-index: -2;
+}
+
+.container .card .card-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #15273fff;
+  width: 315px;
+  padding: 15px;
+  border-radius: 3%;
+}
+.container .card .card-content::before {
+  content: "";
+  position: absolute;
+  background-color: #0c1729ff;
+  width: 345px;
+  height: 100%;
+  bottom: -35px;
+  border-radius: 3%;
+  z-index: -1;
+}
+.container .card .card-content hr {
+  width: 100%;
+  height: 1px;
+  color: rgb(137, 171, 216, 20%);
+}
+.container .card .card-content .image-container {
+  position: relative;
+}
+.container .card .card-content .image-container .image {
+  height: 285px;
+}
+.container .card .card-content .image-container .overlay {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+  background-color: rgb(36, 239, 243, 60%);
+}
+.container .card .card-content .image-container:hover > .overlay,
+.container .card .card-content .image-container:hover .view {
+  display: block;
+  cursor: pointer;
+}
+.container .card .card-content .image-container .view {
+  display: none;
+  position: absolute;
+  width: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .card .card-content .image-container .eq {
+  height: 100%;
+  width: 285px;
+  border-radius: 3%;
+}
+.container .card .card-content .text h2 {
+  color: #f5ffffff;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  font-weight: 600;
+}
+.container .card .card-content .text h2:hover {
+  color: #01fefbff;
+  cursor: pointer;
+}
+.container .card .card-content .text p {
+  color: #88a7d3ff;
+  font-weight: 400;
+  margin-bottom: 19px;
+  font-weight: 300;
+}
+.container .card .card-content .details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 19px;
+}
+.container .card .card-content .details .price {
+  display: flex;
+  align-items: center;
+}
+.container .card .card-content .details .price img {
+  margin-right: 5px;
+}
+.container .card .card-content .details .price span {
+  color: #01fefbff;
+  font-weight: 600;
+}
+.container .card .card-content .details .time {
+  display: flex;
+  align-items: center;
+}
+.container .card .card-content .details .time span {
+  color: #89abd8ff;
+}
+.container .card .card-content .details .time img {
+  margin-right: 5px;
+}
+.container .card .card-content .information {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container .card .card-content .information img {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.container .card .card-content .information p {
+  color: #89abd8ff;
+  font-weight: 300;
+}
+.container .card .card-content .information p > span {
+  color: #f5ffffff;
+  font-weight: 400;
+}
+.container .card .card-content .information p > span:hover {
+  color: #01fefbff;
+  cursor: pointer;
+}
